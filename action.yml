@@ -1,0 +1,20 @@
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+  image:
+    description: 'The image name'
+    required: true
+    default: docker://debian:stretch-slim
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: ${{ inputs.image }}
+  args:
+    - ${{ inputs.who-to-greet }}
