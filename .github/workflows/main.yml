@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: actions/hello-world-docker-action@v1
+      uses: ziodave/hello-world-docker-action@v1
       with:
         who-to-greet: 'Mona the Octocat'
         image: docker://docker:dind-rootless
